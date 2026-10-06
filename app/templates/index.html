@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6f0">
+  <title>PocketSmart AI | Plan within budget</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="PocketSmart home"><span class="brand-mark">p</span><span>PocketSmart<span class="brand-ai"> AI</span></span></a>
+    <div class="top-actions">
+      <button id="history-button" class="quiet-button" hidden>My plans</button>
+      <button id="account-button" class="account-button">Sign in</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR BUDGET, WITH A PLAN</p>
+        <h1>Good ideas.<br><span>Thoughtful budgets.</span></h1>
+        <p class="hero-intro">Tell us what you’re planning. Get a clear starting point for where your money could go.</p>
+        <div class="trust-note"><span class="sparkle">✳</span> Estimates, ideas, and store searches in one place</div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-card"><span class="art-pie">◔</span><span class="art-caption">Your plan<br><b>starts here</b></span><span class="art-coin coin-a">₹</span><span class="art-coin coin-b">✦</span></div></div>
+    </section>
+
+    <section class="planner-shell" aria-labelledby="planner-title">
+      <div class="section-heading"><div><p class="eyebrow">PICK A PLANNER</p><h2 id="planner-title">What are we planning?</h2></div><div id="mode-badge" class="mode-badge">Checking mode…</div></div>
+      <div class="planner-tabs" role="tablist" aria-label="Choose a planner">
+        <button class="planner-tab active" data-planner="home" role="tab" aria-selected="true"><span class="tab-icon">⌂</span><span>Home</span></button>
+        <button class="planner-tab" data-planner="party" role="tab" aria-selected="false"><span class="tab-icon">✳</span><span>Party</span></button>
+        <button class="planner-tab" data-planner="jewelry" role="tab" aria-selected="false"><span class="tab-icon">◇</span><span>Jewelry</span></button>
+      </div>
+      <div class="form-card">
+        <form id="planner-form">
+          <div id="planner-fields"></div>
+          <div class="form-footer"><p class="privacy-note">Your optional outfit image is never saved by this app.</p><button id="submit-button" class="primary-button" type="submit">Build my plan <span aria-hidden="true">→</span></button></div>
+        </form>
+      </div>
+      <div id="status-message" class="status-message" role="status" aria-live="polite"></div>
+    </section>
+    <section id="results-section" class="results-section" hidden>
+      <div class="results-heading"><div><p class="eyebrow">YOUR STARTING POINT</p><h2 id="result-title">Your plan</h2></div><span id="result-source" class="source-pill"></span></div>
+      <p id="result-summary" class="result-summary"></p>
+      <div class="budget-strip"><div><span>Budget</span><strong id="budget-value"></strong></div><span class="budget-divider"></span><div><span>Estimated plan</span><strong id="total-value"></strong></div><span class="budget-check">✓ Within budget</span></div>
+      <div id="recommendation-grid" class="recommendation-grid"></div>
+      <div class="insight-grid"><div class="insight-card"><h3>Planning notes</h3><ul id="tips-list"></ul></div><div class="insight-card caveat-card"><h3>Keep in mind</h3><ul id="caveats-list"></ul></div></div>
+      <p class="disclaimer">Prices are estimates, not live offers. Store links search the retailer’s site; confirm current prices, availability, delivery, and fees before purchasing.</p>
+    </section>
+    <section id="history-section" class="history-section" hidden><div class="results-heading"><div><p class="eyebrow">SAVED ON THIS DEVICE</p><h2>Your recent plans</h2></div><button id="close-history" class="quiet-button">Back to planner</button></div><div id="history-list"></div></section>
+  </main>
+  <footer><span class="brand small-brand"><span class="brand-mark">p</span> PocketSmart AI</span><span>Plan with care. Spend with clarity.</span></footer>
+
+  <dialog id="account-dialog" class="account-dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+    <p class="eyebrow">YOUR POCKETSMART ACCOUNT</p><h2 id="auth-title">Welcome back</h2><p class="dialog-subtitle">Sign in to keep your plans together.</p>
+    <div class="auth-tabs"><button id="login-tab" class="auth-tab active" type="button">Sign in</button><button id="register-tab" class="auth-tab" type="button">Create account</button></div>
+    <form id="auth-form" class="auth-form"><label id="name-field" hidden>Your name<input name="display_name" maxlength="60" autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><label>Password<input name="password" type="password" required minlength="10" maxlength="128" autocomplete="current-password"></label><p id="auth-error" class="auth-error" role="alert"></p><button id="auth-submit" class="primary-button" type="submit">Sign in</button></form>
+  </dialog>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
+
