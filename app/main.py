@@ -197,4 +197,3 @@ async def history(request: Request):
         rows = db.execute("SELECT id, planner, request_json, result_json, created_at FROM history WHERE user_id=? ORDER BY id DESC LIMIT 30", (user["id"],)).fetchall()
     return {"items": [{"id": row["id"], "planner": row["planner"], "request": json.loads(row["request_json"]),
         "result": json.loads(row["result_json"]), "created_at": row["created_at"]} for row in rows]}
-

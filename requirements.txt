@@ -7,4 +7,3 @@ google-genai>=1.0,<2.0
 email-validator>=2.2,<3.0
 jinja2>=3.1,<4.0
 httpx>=0.28,<1.0
-

@@ -24,4 +24,3 @@ class Recommendation(BaseModel):
     tips: list[str] = Field(default_factory=list, max_length=6)
     caveats: list[str] = Field(default_factory=list, max_length=6)
     source: Literal["AI estimate", "Demo estimate"] = "Demo estimate"
-

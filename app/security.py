@@ -48,4 +48,3 @@ def session_user_id(token: str | None) -> int | None:
         return int(user_id)
     except (ValueError, TypeError):
         return None
-

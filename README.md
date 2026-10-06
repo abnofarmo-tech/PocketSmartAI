@@ -44,4 +44,3 @@ Run `python -m unittest discover -s tests -v`. The tests use demo mode and do no
 - Use HTTPS and set `COOKIE_SECURE=true` before exposing the service beyond localhost. Add rate limiting, account recovery, backups, privacy notices, and deployment secrets management before public launch.
 - Outfit images are MIME/size checked, read in memory, and never saved. Gemini mode transmits them to Google's API under its terms.
 - The PDF's Watsonx/IBM prerequisite list conflicts with its Gemini implementation path; this project uses Gemini and needs no IBM account.
-

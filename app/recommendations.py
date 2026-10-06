@@ -103,4 +103,3 @@ def retailer_search_url(retailer: str, query: str) -> str:
         "OYO": f"https://www.oyorooms.com/search?location={q}",
     }
     return urls.get(retailer, urls["Amazon"])
-

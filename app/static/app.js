@@ -118,4 +118,3 @@ fetch('/api/health').then(response => response.json()).then(data => {
   document.querySelector('#mode-badge').textContent = data.recommendation_mode === 'gemini' ? '✦ Gemini AI enabled' : '◌ Demo mode · no API key';
 }).catch(() => { document.querySelector('#mode-badge').textContent = 'Service unavailable'; });
 refreshSession().catch(() => {});
-
