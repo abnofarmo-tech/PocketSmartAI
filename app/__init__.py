@@ -1,0 +1,2 @@
+"""PocketSmart AI application package."""
+
